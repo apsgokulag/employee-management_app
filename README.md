@@ -1,11 +1,11 @@
-nstall Composer (if not installed yet):
+install Composer (if not installed yet):
 
 Composer is the tool that Laravel uses to manage dependencies. First, make sure you have Composer installed on your machine. If you haven't installed Composer yet, follow the installation instructions from the official Composer website.
 
 For Linux/Mac:
 
 bash
-Copy
+
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 For Windows: Download the Composer installer from here and follow the instructions.
@@ -17,14 +17,16 @@ Open your terminal or command prompt and navigate to the root directory of your 
 Example:
 
 bash
-Copy
+
 cd /path/to/your/laravel/project
+
+
 Install Laravel Vendor Files:
 
 Run the following command to install the Laravel dependencies (vendor files):
 
 bash
-Copy
+
 composer install
 This command will:
 
@@ -38,7 +40,7 @@ Set Permissions (Optional):
 If you're working on a Linux/Mac system, you might need to set the correct file permissions for the Laravel storage and bootstrap/cache directories to make sure everything works smoothly:
 
 bash
-Copy
+
 sudo chmod -R 775 storage bootstrap/cache
 sudo chown -R www-data:www-data storage bootstrap/cache
 For Windows, ensure that you have the appropriate file access permissions set for your project folder.
@@ -52,19 +54,19 @@ For example, you may want to:
 Clear any cache:
 
 bash
-Copy
+
 php artisan cache:clear
 Generate the application key:
 
 bash
-Copy
+
 php artisan key:generate
 Start the Development Server (Optional):
 
 You can now start Laravel's development server to see your application in action:
 
 bash
-Copy
+
 php artisan serve
 This will start a local server at http://localhost:8000.
 
@@ -73,13 +75,13 @@ If you face issues with dependencies:
 
 You can try updating the dependencies with the following command:
 bash
-Copy
+
 composer update
 If you get memory limit issues:
 
 Sometimes, Composer might run into memory limits. If so, increase the memory limit using:
 bash
-Copy
+
 php -d memory_limit=-1 $(which composer) install
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
